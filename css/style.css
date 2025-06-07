@@ -1,0 +1,188 @@
+/* style.css - Diamond Forest v3 Full-Site Background + Modern UI */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url("../assets/hero-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+/* Overlay behind all content */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+  z-index: -1;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  margin: 0.5em 0;
+  color: #fff;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+p {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0,0,0,0.7);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.nav-links a i {
+  margin-right: 4px;
+}
+
+/* Hero Section */
+.hero-bg {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 90%;
+}
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.product-card {
+  background: rgba(255,255,255,0.9);
+  color: #111;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+}
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.product-card button {
+  margin-top: 1rem;
+  background: #0077cc;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sections */
+.cart-section, .checkout, .faq-section, .help-section {
+  padding: 2rem 0;
+}
+.cart-item, .faq-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.qty-input {
+  width: 50px;
+  padding: 4px;
+}
+
+/* FAQ Accordion */
+.faq-answer {
+  display: none;
+  padding: 0.5rem 0;
+  color: #ddd;
+}
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.faq-question.open {
+  color: #00ccff;
+}
+
+/* Form Styling */
+form input, form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}

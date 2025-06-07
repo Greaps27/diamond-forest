@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Diamond Forest</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">DIAMOND FOREST</div>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="shop.html"><i class="fas fa-store"></i> SHOP</a></li>
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> MY ORDERS</a></li>
+        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+        <li><a href="help.html"><i class="fas fa-comments"></i> HELP</a></li>
+        <li><a href="#" onclick="logoutUser()"><i class="fas fa-sign-out-alt"></i> LOGOUT</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <section class="checkout">
+    <div class="container">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <label>Name</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Address</label>
+        <input type="text" required>
+
+        <label>Card Number</label>
+        <input type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+
+        <button type="submit" class="btn-primary">Pay Now</button>
+      </form>
+      <p id="confirmation" style="display:none; margin-top:1rem; color:green;"></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Diamond Forest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/checkout.js"></script>
+  <script>
+  function logoutUser() {
+    localStorage.removeItem("user");
+    alert("You have been logged out.");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

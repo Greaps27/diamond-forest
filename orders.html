@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders - Diamond Forest</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">DIAMOND FOREST</div>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="shop.html"><i class="fas fa-store"></i> SHOP</a></li>
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> MY ORDERS</a></li>
+        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+        <li><a href="help.html"><i class="fas fa-comments"></i> HELP</a></li>
+        <li><a href="#" onclick="logoutUser()"><i class="fas fa-sign-out-alt"></i> LOGOUT</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>My Orders</h2>
+      <div id="orders-list"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Diamond Forest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/orders.js"></script>
+  <script>
+  function logoutUser() {
+    localStorage.removeItem("user");
+    alert("You have been logged out.");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

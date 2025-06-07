@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIAMOND FOREST - Luxury Jewelry</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">DIAMOND FOREST</div>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="shop.html"><i class="fas fa-store"></i> SHOP</a></li>
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> MY ORDERS</a></li>
+        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+        <li><a href="help.html"><i class="fas fa-comments"></i> HELP</a></li>
+        <li><a href="#" onclick="logoutUser()"><i class="fas fa-sign-out-alt"></i> LOGOUT</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-bg">
+    <div class="hero-overlay">
+      <h1>Featured Collection</h1>
+      <p>Explore the exclusive pieces inspired by the beauty of nature</p>
+      <a href="shop.html" class="btn-primary">SHOP NOW</a>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <div class="container">
+      <h2>SHOP BY CATEGORY</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="assets/bracelets-category.jpg" alt="Bracelets">
+          <h3>BRACELETS</h3>
+        </div>
+        <div class="product-card">
+          <img src="assets/earrings-category.jpg" alt="Earrings">
+          <h3>EARRINGS</h3>
+        </div>
+        <div class="product-card">
+          <img src="assets/rings-category.jpg" alt="Rings">
+          <h3>RINGS</h3>
+        </div>
+        <div class="product-card">
+          <img src="assets/necklaces-category.jpg" alt="Necklaces">
+          <h3>NECKLACES</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Design Section -->
+  <section class="custom-design">
+    <div class="container">
+      <div class="custom-content">
+        <h2>DESIGN YOUR OWN</h2>
+        <p>From selecting your perfect lab-grown diamond to choosing the setting, metal, and personal touches, our custom design process brings your vision to life with expert craftsmanship and effortless guidance every step of the way.</p>
+        <a href="products/custom.html" class="btn-secondary">START YOUR CUSTOM DESIGN</a>
+      </div>
+      <div class="custom-image">
+        <img src="assets/custom-design.jpg" alt="Custom Design">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Diamond Forest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Logout Script -->
+  <script>
+    function logoutUser() {
+      localStorage.removeItem("user");
+      alert("You have been logged out.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

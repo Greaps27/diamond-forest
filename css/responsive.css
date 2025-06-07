@@ -1,0 +1,91 @@
+/* Tablet View */
+@media (max-width: 992px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .custom-design .container {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-steps, .options-grid, .education-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .custom-cta .container, .earring-guide .guide-content {
+        flex-direction: column;
+    }
+    
+    .earring-guide .guide-image {
+        order: -1;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .legal-links {
+        margin-top: 15px;
+    }
+    
+    .legal-links a {
+        margin: 0 10px;
+    }
+    .process-steps, .options-grid, .education-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .step, .option-card, .education-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
